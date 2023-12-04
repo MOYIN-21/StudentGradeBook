@@ -3,29 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./gradeBook.css">
-    <title>GradeBook</title>
+    <title>Student GradeBook</title>
+    <link rel="stylesheet" href="gradeBook.css">
 </head>
 <body>
-    <div class="mother-div">
-        <div class="nav-bar">
-
-            <div class="heading"><H2>Welcome to JAM Student Grade Book</H2></div>
-            <div class="question">Are you are student?
-                <button onclick=""></button>
-            </div>
-            <div class="teacher">Are you a teacher?
-
-                <button style="width: 80px;">Yes, i am</button>
-            </div>
+    <div class="container">
+        <h1>Welcome to GradeBook!</h1>
+        <div class="form-wrapper">
+            <div class="form-container active" id="login-form">
+                <h2>Login</h2>
+                <form id="loginForm">
+                    <label for="username">Username:</label>
+                    <input type="text" name="username" id="username" placeholder="Enter username" required>
+                    <label for="password">Password:</label>
+                    <input type="password" name="password" id="password" placeholder="Enter password" required>
+                    <div class="radio-wrapper">
+                        <input type="radio" name="userType" id="teacher-type" value="teacher" checked>
+                        <label for="teacher-type">Teacher</label>
+                        <input type="radio" name="userType" id="student-type" value="student">
+                        <label for="student-type">Student</label>
+                    </div>
+                    <button type="submit">Login</button>
+                    <button type="submit">Register</button>
                 
-            
-
-
+                </form>
+                <span id="login-error"></span>
+            </div>
         </div>
-
     </div>
 
-    
+    <script src="gradeBook.js"></script>
 </body>
 </html>
