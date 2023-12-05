@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="studentDashboard.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Dashboard</h1>
+        <div class="form-wrapper">
+            <div class="form-container" id="student-dashboard">
+                <h2>View Your Grades</h2>
+                <form id="viewGradeForm">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th style="width: 25%;">Subject</th>
+                                <th style="width: 25%;">Score</th>
+                                <th style="width: 25%;">Grade</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                        
+                            <tr>
+                                <td>
+                                    <input type="text" name="subject1" placeholder="Subject" readonly>
+                                </td>
+                                <td>
+                                    <input type="number" name="score1" placeholder="Score" readonly>
+                                </td>
+                                <td>
+                                    <input type="text" name="grade1" placeholder="Grade" readonly>
+                                </td>
+                            </tr>
+
+                        
+                        </tbody>
+                    </table>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="studentDashboard.js"></script>
+</body>
+</html>

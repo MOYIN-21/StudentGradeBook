@@ -2,17 +2,8 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: black;
-    font-size: large;
-    }
-  
-/* .container {
-    max-width: 200erm;
-    margin: 0 auto;
-    color: white;
-    display: flex;
-
-  } */
+    background-color: greenyellow;
+  }
   
 h1, h2 {
     text-align: center;
