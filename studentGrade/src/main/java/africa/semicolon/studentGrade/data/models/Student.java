@@ -4,6 +4,9 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 public class Student {
 
@@ -12,7 +15,7 @@ public class Student {
     private String firstName;
     private String lastName;
     private String studentMatricNumber;
-    private Subject subject;
+    private List<Subject> subject = new ArrayList<>();
     private double score;
     private String grade;
 
@@ -31,6 +34,12 @@ public class Student {
             this.grade = "F";
         this.score = score;
     }
+
+    public void setSubject(List<Subject> subject) {
+        this.subject = subject;
+    }
+
+
 
     @Override
     public String toString() {
