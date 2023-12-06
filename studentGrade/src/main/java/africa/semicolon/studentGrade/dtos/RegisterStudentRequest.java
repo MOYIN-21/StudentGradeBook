@@ -7,11 +7,12 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Data
+
 public class RegisterStudentRequest {
 
     private String firstName;
     private String lastName;
-    private String studentMatricNumber;
+    private String studentMatriculationNumber;
     private List<Subject> subject = new ArrayList<>();
     private double score;
     private String grade;
