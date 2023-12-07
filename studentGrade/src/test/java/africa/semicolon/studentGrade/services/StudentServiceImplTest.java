@@ -9,6 +9,9 @@ import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.is;
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -33,12 +36,22 @@ class StudentServiceImplTest {
         newStudent.setFirstName("Joe");
         newStudent.setLastName("Nath");
         newStudent.setStudentMatricNumber("2023/001");
-        newStudent.setSubject(Subject.ECONOMICS);
+        List<Subject> subjects = new ArrayList<>();
+        subjects.add(Subject.ECONOMICS);
+
+//        newStudent.setSubject(new ArrayList<Subject>(){});
+        subjects.add(Subject.BIOLOGY);
         newStudent.setScore(90);
-        newStudent.setSubject(Subject.BIOLOGY);
+//        System.out.println(newStudent.getSubject());
+
+//        newStudent.setSubject(Subject.BIOLOGY);
+        subjects.add(Subject.AGRICULTURE);
         newStudent.setScore(92);
-        newStudent.setSubject(Subject.AGRICULTURE);
+//        System.out.println(newStudent.getSubject());
+
+        newStudent.setSubject(subjects);
         newStudent.setScore(78);
+        System.out.println(newStudent.getSubject());
         studentService.collateStudentGrade(newStudent);
         assertThat(studentRepository.count(), is(1L));
     }
@@ -57,5 +70,10 @@ class StudentServiceImplTest {
         newStudent2.setLastName("Nath");
         newStudent2.setStudentMatricNumber("2023/001");
         assertThrows(StudentAlreadyExistsException.class, ()-> studentService.collateStudentGrade(newStudent2));
+    }
+
+    @Test
+    public void testThatGradesCanBeDisplayed() {
+
     }
 }
