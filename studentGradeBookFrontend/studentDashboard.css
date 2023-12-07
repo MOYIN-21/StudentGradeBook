@@ -2,20 +2,44 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
+  background-image: url(imgz/inaki-del-olmo-NIJuEQw0RKg-unsplash.jpg);
+    height: 100px;
+    background-repeat: no-repeat;
     background-color: orange;
 }
 
 .container {
-    max-width: 500px;
+    max-width: 1000px;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    font-size: 35px;
+    font-family: 'Monoton', sans-serif;
+    font-weight: 500;
+    color: antiquewhite;
+    letter-spacing: 3px;
 }
+
+h2{
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 30px;
+    font-family: 'IBM Plex Mono', monospace;
+    color: white;
+}
+
 
 .form-container {
+    border: 1px solid #838282;
+    border-radius: 7px;
+    padding: 15px;
     border: 5px solid blue ;
     border-radius: 5px;
     padding: 20px;
@@ -23,38 +47,32 @@ h1, h2 {
 
 table {
     width: 100%;
-    border-collapse: collapse;
+    height: 100%;
     margin-top: 20px;
 }
 
 th, td {
-    border: 1px solid #ddd;
+    border: 1px solid #3b6845;
     padding: 8px;
-    text-align: left;
 }
 
 th {
     background-color: #007bff;
     color: white;
+    
+    
 }
 
 input[readonly] {
-    background-color: #f2f2f2;
-    border: 1px solid #ddd;
+    background-color: #dad6d6;
+    border: 1px solid #186648;
     padding: 8px;
-    width: 100%;
+    width: 90%;
+    text-align: center;
 }
 
-button {
-    background-color: #007bff;
-    color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 3px;
-    cursor: pointer;
-    margin-top: 10px;
-}
-
-button:hover {
-    background-color: #0056b3;
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 }

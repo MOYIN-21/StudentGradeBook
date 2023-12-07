@@ -2,53 +2,91 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 20px;
-    background-color: greenyellow;
+    background-image: url(imgz/joanna-kosinska-1_CMoFsPfso-unsplash.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .container {
-    max-width: 500px;
-    margin: 0 auto;
+    max-width: 1000px;
+    margin-top: 100px;
 }
 
-h1, h2 {
+h1 {
     text-align: center;
     margin-bottom: 20px;
+    color: rgb(96, 89, 132);
+    font-size: 80px;
+    font-family: 'Russo One', sans-serif;
+    letter-spacing: 2px;
+}
+h2 {
+    text-align: center;
+    line-height: 0px;
+    font-size: 38px;
+    font-family: 'Courier New', Courier, monospace;
+    color: rgb(229, 91, 11);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+th{
+   color: whitesmoke;
+   font-size: 30px;
 }
 
 .form-container {
-    border: 1px solid #ddd;
-    border-radius: 5px;
+   line-height: 70px;
     padding: 20px;
+    
 }
 
 form {
     margin-bottom: 10px;
 }
 
-label {
-    display: block;
-    margin-bottom: 5px;
-}
-
-
 input {
     display: block;
-    width: calc(100% - 20px); 
+
     padding: 8px;
     border: 1px solid #ddd;
     border-radius: 3px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 button {
     background-color: #007bff;
     color: white;
-    padding: 8px 12px;
-    border: none;
-    border-radius: 3px;
+    font-size: 25px;
+    padding: 20px 25px;
+    border-radius: 10px;
     cursor: pointer;
 }
 
 button:hover {
     background-color: #0056b3;
+    border: 5px red;
+
 }
+
+input{
+    border-radius: 10px;
+    width: 90%;
+    font-size: 20px; 
+  padding: 10px;
+}
+
+
+@media only screen and (max-width: 480px) {
+    .container {
+      max-width: 1000px;
+    }
+  }
+  
